@@ -1,6 +1,6 @@
 @echo off
+git pull
 setlocal
-
 
 REM Prompt the user for the filename to ignore
 set /p ignorefile="Enter filename to ignore (including extension): "

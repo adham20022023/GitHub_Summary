@@ -1,6 +1,8 @@
 @echo off
-git pull
 setlocal
+
+REM Update the local repository with the latest changes from the remote
+git pull
 
 REM Prompt the user for the filename to ignore
 set /p ignorefile="Enter filename to ignore (including extension): "
@@ -24,6 +26,9 @@ if /i "%confirm%"=="y" (
 ) else (
   echo Changes not pushed to origin.
 )
+
+REM Display the status of the repository after making the changes
+git status
 
 REM Pause for 3 seconds before exiting
 timeout 3
